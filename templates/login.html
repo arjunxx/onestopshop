@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{%block title%}
+login
+{%endblock%}
+
+{%block body%}
+
+
+<div class="bg-light jumbotron p-2">
+    <h3>Login here!</h3>
+</div>
+
+<form method="POST">
+    <div class="row">
+        <div class="col-1">
+            <label class="px-1" for="username">username</label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" name="username" placeholder="enter username here" id="username">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+            <label class="px-1" for="password">password</label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="password" name="password" placeholder="enter password here" id="password">
+        </div>
+    </div>
+    <!-- <div class="form-floating">
+        <input class="form-control" type="text" name="number" id="number">
+        <label for="number">number</label>
+    </div> -->
+
+    <input class="btn btn-success" type="submit">
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}" role="alert">
+        {{message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{%endblock%}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{%block title%}
+Add items
+{%endblock%}
+
+{%block body%}
+<h1>
+    Add items to cart
+</h1>
+
+<form method="POST">
+    <div class="row my-2 mx-2">
+        <div class="col-1">
+            <label for="itemname">Item name:</label>
+        </div>
+        <div class="col-11">
+            <input class="form-control" type="text" name="itemname" id="itemname" placeholder="Enter item name here, ex:'apple'">
+        </div>
+    </div>
+
+    <div class="row my-2 mx-2">
+        <div class="col-1">
+            <label for="price">Item price:</label>
+        </div>
+        <div class="col-11">
+            <input class="form-control" type="text" name="price" id="price" placeholder="Enter item price here, ex:'2','3.50'">
+        </div>
+    </div>
+
+    <div class="row my-2 mx-2">
+        <div class="col-1">
+            <label for="price">Item Image:</label>
+        </div>
+        <div class="col-11">
+            <input class="form-control" type="text" name="image" id="image" placeholder="Enter image url here">
+        </div>
+    </div>
+    <button type="submit" class="mx-3">submit</button>
+</form>
+
+{%endblock%}

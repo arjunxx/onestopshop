@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{%block title%}
+sign up
+{%endblock%}
+
+{%block body%}
+
+<div class="bg-light jumbotron p-2">
+    <h3>Sign up Here!</h3>
+</div>
+
+<form method="POST">
+    <div class="row">
+        <div class="col-1">
+            <label class="px-1" for="firstname">first name:</label>
+        </div>
+        <div class="col-2">
+            <input class="form-control" type="text" name="firstname" placeholder="first name" id="firstname">
+        </div>
+
+
+
+        <div class="col-1">
+            <label class="px-1" for="lastname">last name:</label>
+        </div>
+        <div class="col-2">
+            <input class="form-control" type="text" name="lastname" placeholder="last name" id="lastname">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <label class="px-1" for="username">username</label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" name="username" placeholder="enter username here" id="username">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+            <label class="px-1" for="password">password</label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="password" name="password" placeholder="enter password here" id="password">
+        </div>
+    </div>
+    <!-- <div class="form-floating">
+        <input class="form-control" type="text" name="number" id="number">
+        <label for="number">number</label>
+    </div> -->
+
+    <button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+
+{%endblock%}

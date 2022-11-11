@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{%block title%}
+checkout
+{%endblock%}
+
+{%block body%}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Price for One</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total for item</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in cart%}
+        <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{i}}</td>
+            <td>${{prices[i]}}</td>
+            <td>{{cart[i]}}</td>
+            <td>${{totalprice[i]}}</td>
+        </tr>
+        {%endfor%}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th scope="row">Total Price:${{tc}}</th>
+        </tr>
+    </tbody>
+</table>
+
+{%endblock%}
